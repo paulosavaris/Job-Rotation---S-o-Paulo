@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+
+#define MAX 100
+
+int main() {
+char palavra[MAX], invertida[MAX];
+int tamanho, i, j;
+
+printf("Digite uma palavra: ");
+fgets(palavra, MAX, stdin); //lê uma string de até MAX caracteres da entrada padrão (stdin é a representação do teclado)
+
+tamanho = strlen(palavra) - 1; // obtem o tamanho da palavra digitada e remove o '\n' do final da string que o fgets adiciona 
+// inverte a palavra escrevendo-a em outro vetor(invertida)
+for (i = 0, j = tamanho - 1; i < tamanho; i++, j--) {
+invertida[i] = palavra[j];
+}
+
+invertida[tamanho] = '\0'; // adiciona o caractere nulo no final da nova string
+
+printf("Palavra invertida: %s\n", invertida);
+
+return 0;
+}
