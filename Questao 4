@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main(void) {
+float dif_sp, porcent_sp, percent_rj, percent_mg, percent_es, percent_outros, soma;
+float sp = 67836.43, rj = 36678.66, mg = 29229.88, es = 27165.48, outros = 19849.53;
+
+soma = sp + rj+ mg + es + outros;
+printf("Total da Distribuidora = %.2f \n", soma );
+
+dif_sp = soma-sp;
+
+porcent_sp = (sp / soma) * 100;
+printf("Representa aproximadamente: %.6f", porcent_sp );
+printf("%% \n");
+
+percent_rj = (rj/soma)*100;
+printf("Representa aproximadamente: %.6f", percent_rj );
+printf("%% \n");
+
+percent_mg = (mg/soma)*100;
+printf("Representa aproximadamente: %.6f", percent_mg );
+printf("%% \n");
+
+percent_es = (es/soma)*100;
+printf("Representa aproximadamente: %.6f", percent_es);
+printf("%% \n");
+
+percent_outros = (outros/soma)*100;
+printf("Representa aproximadamente: %.6f", percent_outros );
+printf("%% \n");
+
+}
