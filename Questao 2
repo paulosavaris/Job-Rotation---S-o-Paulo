@@ -1,0 +1,21 @@
+
+
+
+int main(){
+int n, valor_0 = 0, valor_1 = 1, proximo, flag = 0;
+
+printf("Informe um número inteiro: ");
+scanf("%d", &n);
+while (proximo <= n) {
+proximo = valor_0 + valor_1;
+valor_0 = valor_1;
+valor_1 = proximo;
+if (n == proximo) {
+printf("%d pertence à sequência de Fibonacci.", n);
+flag = 1;
+}
+}
+if (flag == 0)
+printf("%d não pertence à sequência de Fibonacci.", n);
+
+}
